@@ -20,7 +20,7 @@ public class RedisTokenBucketService {
     //rate_limiter:tokens:192.168.1.100 --> Current Token Count
     //rate_limiter:last_refill:192.168.1.100 --> Last Refill Timestamp
 
-    public boolean isALlowed(String clientId) {
+    public boolean isAllowed(String clientId) {
         String tokenKey = TOKENS_KEY_PREFIX + clientId;
 
         try(Jedis jedis = jedisPool.getResource()) {
